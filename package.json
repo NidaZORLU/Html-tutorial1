@@ -1,0 +1,33 @@
+{
+  "name": "html-tutorial",
+  "version": "1.0.0",
+  "description": "## Installion",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NidaZORLU/html-tutorial.git"
+  },
+  "keywords": [],
+  "author": "Nida ZORLU",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-changed": "^4.0.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2"
+  },
+  "bugs": {
+    "url": "https://github.com/NidaZORLU/html-tutorial/issues"
+  },
+  "homepage": "https://github.com/NidaZORLU/html-tutorial#readme"
+}
