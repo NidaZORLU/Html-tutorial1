@@ -13,66 +13,69 @@ const concat = require('gulp-concat');
 //const imagemin = require('gulp-imagemin');
 const changed = require('gulp-changed');
 const browsersync = require('browser-sync').create();
-const clean = require('clean')
+const del = require('del')
+
+const dist = './dist'
+const source = './src';
+
 
 function js() {
-    const source = '/static_files/script.js';
-
-    return src(source)
+    return src(source + '/assets/js/script.js')
         .pipe(changed(source))
         .pipe(concat('script.js'))
         .pipe(uglify())
-        .pipe(dest('/static_files/script.js'))
+        .pipe(dest(dist + '/assets/js'))
         .pipe(browsersync.stream());
 }
 
 
-function clear(){
-	clean()
+function clean() {
+    return del([dist + '**', '!' + dist])
 }
 
 
 function css() {
-    const source = '/static_files/style.css';
-
-    return src(source)
+    return src(source + '/assets/css/style.css ')
         .pipe(changed(source))
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 2 versions'],
             cascade: false
         }))
         .pipe(cssnano())
-        .pipe(dest('/static_files/style.css'))
+        .pipe(dest(dist + '/assets/css'))
         .pipe(browsersync.stream());
 }
 
 
 function img() {
-    return src('/assets/img')
+    return src(source + '/assets/img/*')
         //.pipe(imagemin())
-        .pipe(dest('/assets/img'));
+        .pipe(dest(dist + '/assets/img'));
 }
 
+function htmlfiles() {
+    return src(source + '/index.html')
+        //.pipe(imagemin())
+        .pipe(dest(dist));
+}
 
 function watchFiles() {
-    watch('/static_files/style.css', css);
-    watch('/script.js', js);
-   // watch('/assets/img', img);
-	watch('/Volumes/Workspace/html-tutorial/static_files/index.html')
+    watch(source + '/assets/css/style.css', css);
+    watch(source + '/asset/js/script.js', js);
+    watch('/assets/img', img);
+    watch(source + '/index.html', htmlfiles)
 }
 
 
 function browserSync() {
     browsersync.init({
         server: {
-            baseDir: './'
+            baseDir: dist
         },
         port: 3000
     });
 }
 
-
-
-exports.watch = parallel(watchFiles, browserSync);
-exports.default = series(clear, parallel(js, css, img));
+exports.watch = series(js, css, img, htmlfiles, parallel(watchFiles, browserSync));
+exports.default = series(clean, parallel(js, css, img, htmlfiles));
     

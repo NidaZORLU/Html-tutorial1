@@ -1,0 +1,655 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    background-color: #f2f2f2;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    margin-top: 2%;
+
+}
+
+.menu > ul {
+    list-style-type: none;
+    font-family: Arial Rounded MT Bold, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    background-color: white;
+    text-align: left;
+    padding-left: 13.5%;
+
+}
+
+.menu li {
+    display: inline-block;
+
+}
+
+.menu li a {
+    display: block;
+    color: rgb(49, 49, 49);
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 18px;
+}
+
+.menu li a:hover {
+    background-color: rgb(20, 150, 20);
+    color: black;
+}
+
+.menu ul li ul {
+    background-color: rgb(20, 150, 20);
+    display: none;
+    position: absolute;
+    z-index: 5;
+}
+
+.menu ul li:hover ul {
+    display: block;
+}
+
+.menu li ul li {
+    display: block;
+}
+
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Verdana, sans-serif;
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+    position: relative;
+}
+
+main {
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    padding-left: 14%;
+}
+
+.text {
+    color: white;
+    font-size: 100%;
+    background-color: #000000;
+    opacity: 0.7;
+    text-align: left;
+    z-index: 3;
+    width: 100%;
+    padding: 5px 10px;
+    position: absolute;
+    bottom: 0
+
+}
+
+.image {
+    position: relative;
+    width: 100%;
+
+}
+
+.h3 {
+    font-weight: bold;
+    font-size: 100%;
+    margin-bottom: 1%;
+    padding-top: 1%;
+}
+
+/* Number text (1/6 etc) */
+.numbertext {
+    color: transparent;
+    font-size: 0;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    width: 98%;
+    margin: 0 1.2%;
+    display: initial;
+    transition: background-color 0.6s ease;
+    opacity: 0.5;
+
+}
+
+.active {
+    background-color: transparent;
+    opacity: 1;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .text {
+        font-size: 11px
+    }
+}
+
+.boxnewsbox {
+    background-color: rgb(202, 200, 200);
+}
+
+.box {
+    background-color: white;
+    width: 100%;
+    max-width: 720px;
+    float: left;
+    clear: left;
+    padding: 2%;
+}
+
+.box1 {
+    background-color: white;
+    text-align: left;
+    font-size: 100%;
+    float: right;
+    width: 20%;
+    padding: 1.5%;
+    margin: 1%;
+    margin-right: 10%;
+}
+
+.box1 ul li a {
+    color: gray;
+    text-decoration: none;
+}
+
+.box2 {
+    color: black;
+    background-color: white;
+    width: 20%;
+    text-align: left;
+    font-size: 100%;
+    float: right;
+    clear: right;
+    padding: 1.5%;
+    margin: 1%;
+    margin-right: 10%;
+}
+
+.box3 {
+    color: black;
+    background-color: white;
+    width: 20%;
+    text-align: center;
+    font-size: 100%;
+    float: right;
+    clear: right;
+    padding: 1%;
+    margin: 1%;
+    margin-right: 10%;
+}
+
+section {
+    background-color: white;
+    margin-top: 1%;
+    width: 100%;
+    font-size: 100%;
+    margin-bottom: 2%;
+    clear: left;
+    float: left;
+}
+
+h2 {
+    font-weight: bold;
+    margin-bottom: 5%;
+    color: rgb(22, 22, 22);
+    font-size: 100%;
+}
+
+ul {
+    font-family: Arial Rounded MT Bold, sans-serif;
+    color: grey;
+    line-height: 1.5;
+    font-size: 100%;
+}
+
+h5 {
+    font-family: Arial Rounded MT Bold, sans-serif;
+    text-align: left;
+    margin-bottom: 10%;
+    color: rgb(24, 24, 24);
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10%;
+    font-size: 100%;
+}
+
+.footer {
+    background: #222222;
+    width: 100%;
+    max-height: 100%;
+    float: left;
+    color: white;
+    font-family: arial;
+}
+
+.footer #boxes1 b {
+    font-size: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.footer_container {
+    max-width: 60%;
+    margin: 2% auto;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 10% 0;
+    padding: 0;
+}
+
+#boxes1 {
+    width: auto;
+    float: left;
+
+}
+
+#boxes {
+    float: left;
+    width: auto;
+}
+
+#boxes:last-child li {
+    float: left;
+    clear: none;
+}
+
+.footer #boxes b {
+    font-size: 100%;
+}
+
+.imagesfifth {
+    color: rgb(85, 82, 82);
+    margin-right: 20%;
+}
+
+.footer ul li {
+    float: left;
+    font-family: tahoma, sans-serif;
+    font-size: 90%;
+    margin-bottom: 4%;
+    clear: left;
+    color: #949798;
+}
+
+#boxes1:last-child li {
+    float: left;
+
+}
+
+.footer #boxes2 b {
+    font-size: 100%;
+}
+
+#boxes2 {
+    width: auto;
+    float: left;
+
+}
+
+#boxes2:last-child li {
+    float: left;
+}
+
+#boxes, #boxes1, #boxes2 {
+    width: 250px;
+    float: left;
+}
+
+
+.imagefirst {
+    width: 100%;
+    max-width: 13%;
+}
+
+.option {
+    text-decoration: none;
+    color: gray;
+}
+
+.imagessecond {
+    max-width: 80%;
+    width: 100%;
+}
+
+.imagesthird {
+    position: relative;
+    width: 35%;
+    padding: 1%;
+    float: left;
+}
+
+.news-details {
+    width: 100%;
+    position: relative;
+    max-width: 400px;
+    float: right;
+}
+
+.news-title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 100%;
+    width: 100%;
+    position: relative;
+    text-align: left;
+
+}
+
+.new-info {
+    font-size: 100%;
+    text-align: center;
+    color: gray;
+    font-size: 100%;
+    width: 100%;
+    position: relative;
+    text-align: left;
+}
+
+.news-conent {
+    text-align: left;
+    color: gray;
+    font-size: 100%;
+    width: 100%;
+    position: relative;
+    text-align: left;
+}
+
+.b {
+    font-weight: bold;
+    width: 100%;
+}
+
+.imagefirstbox {
+    text-align: left;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+
+/*Mobile View*/
+@media only screen and (max-width: 575px) {
+    .menu > ul {
+        padding-left: 0;
+    }
+
+    .container {
+        width: 100%;
+
+    }
+
+    main {
+        padding-left: 0;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .section {
+        width: 100%;
+    }
+
+    .image {
+        width: 100%;
+    }
+
+    .text {
+        width: 100%;
+        font-size: smaller;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    .box1 {
+        width: 100%;
+        margin-right: 0;
+
+    }
+
+    .box2 {
+        width: 100%;
+        margin-right: 0;
+
+    }
+
+    .box3 {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .news-title {
+        width: 100%;
+    }
+
+    .new-info {
+        width: 100%;
+    }
+
+    .footer {
+        width: 100%;
+    }
+
+    .imagefirst {
+        width: 100%;
+    }
+
+    .imagessecond {
+        max-width: 50%;
+    }
+
+    .normal_menu {
+        display: none !important;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+    .menu > ul {
+        padding-left: 0;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .section {
+        width: 100%;
+    }
+
+    .image {
+        width: 100%;
+    }
+
+    .text {
+        width: 100%;
+        font-size: x-small;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    .box1 {
+        width: 100%;
+    }
+
+    .box2 {
+        width: 100%;
+    }
+
+    .box3 {
+        width: 100%;
+    }
+
+    .news-title {
+        width: 100%;
+    }
+
+    .new-info {
+        width: 100%;
+    }
+
+    .footer {
+        width: 100%;
+    }
+
+    .imagefirst {
+        width: 100%;
+    }
+
+    .imagessecond {
+        max-width: 50%;
+    }
+    .normal_menu {
+        display: none !important;
+    }
+}
+
+
+
+
+
+
+
+
+
